@@ -8,7 +8,7 @@ const Service = () => {
             <p className='text-center '>These are the technologies I've worked with</p>
 
             <div className='py-12 grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 mt-8'>
-                <div class="card w-66 bg-base-100 shadow-xl shadow-lg   shadow-orange-500/20">
+                <div class="card w-66 bg-base-100 shadow-xl shadow-lg shadow-orange-500/20">
                     <figure class="px-10 pt-10">
                         <img src="https://www.seansimms.com/static/media/html.2ba4fabc69a89a8f71e6.png" alt="" width="80" height="80" class="rounded-xl" />
                     </figure>

@@ -26,8 +26,8 @@ const Navbar = () => {
                     {menuitems}
                 </ul>
             </div>
-            <div className="navbar-start">
-                <a className='btn btn-primary' href="https://drive.google.com/file/d/1WAc-AbnFfgKkwLoSezzs2S_yy3BiGUCC/view?usp=sharing">Downlod Resume</a>
+            <div className="navbar-end">
+                <a className='btn btn-primary justify-end' href="https://drive.google.com/file/d/1WAc-AbnFfgKkwLoSezzs2S_yy3BiGUCC/view?usp=sharing">Downlod Resume</a>
 
             </div>
         </div>
