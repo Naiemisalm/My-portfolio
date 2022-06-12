@@ -13,7 +13,7 @@ const Home = () => {
                 <div class="hero min-h-screen bg-base-200">
                     <div class="hero-content flex-col lg:flex-row-reverse">
                         {/* <img src="https://st2.depositphotos.com/3369547/8161/v/950/depositphotos_81611512-stock-illustration-web-developer-design.jpg" alt=''width="400" height="500" /> */}
-                        <img class="mask mask-decagon" src="https://st2.depositphotos.com/3369547/8161/v/950/depositphotos_81611512-stock-illustration-web-developer-design.jpg" alt='' width="400" height="500" />
+                        <img class="mask mask-decagon" src="https://st2.depositphotos.com/3369547/8161/v/950/depositphotos_81611512-stock-illustration-web-developer-design.jpg" alt='' className='rounded-md duration-200 hover:scale-105' width="400" height="500" />
                         <div>
                             <h1 className='text-2xl '> <span className='text-amber-600'>HI</span> THERE</h1>
                             <h1 class="text-5xl font-bold">I am Web Developer</h1>
