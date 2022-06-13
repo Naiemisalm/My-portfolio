@@ -1,6 +1,7 @@
 import React from 'react';
 import emailjs from 'emailjs-com'
-import { FaFacebookF, FaGithub, FaLinkedin } from 'react-icons/fa';
+import { contact } from '../../data';
+
 
 
 const Contact = () => {
@@ -9,48 +10,53 @@ const Contact = () => {
         emailjs.sendForm()
     }
     return (
-       <div>
-         <form className=' px-96' onSubmit={sendEmail}>
-            <div className='justify-center bg'>
-                <div>
-                    <h1  className='text-center uppercase text-3xl py-5 text-amber-600'> contact me</h1>
-                </div>
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Name</span>
-                    </label>
-                    <input type="text" placeholder="Enter your name" class="input input-bordered w-full max-w-xs" />
-                </div>
-
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Email</span>
-                    </label>
-                    <input type="email" placeholder="Enter your email" class="input input-bordered w-full max-w-xs" />
-                </div>
-
-                <div class="form-control w-full max-w-xs">
-                    <label class="label">
-                        <span class="label-text">Message</span>
-                    </label>
-                    <textarea type="message" placeholder=" Eenter your message" class="input input-bordered w-full max-w-xs" />
-                </div>
-
-                <div class="form-control w-full max-w-xs">
-
-                    <input type="submit" value="send" class="input input-bordered w-full mt-5 btn btn-primary" />
-                </div>
-
+        <section className='bg-black mt-10' id='contact'>
+          <div className='container mx-auto'>
+            <div className='flex flex-col items-center text-center'>
+              <h2 className='text-3xl text-center py-6 underline'> Contact me </h2>
             </div>
-        </form>
-        <div className='px-96 py-10 inline-flex'>
-            <a className='max-h-10 w-16 '  href="https://web.facebook.com/profile.php?id=100012267494575"> <FaFacebookF /></a>
-            <a className='h-16 w-16' href="https://www.linkedin.com/in/nayem-islam-34a1221b4/"> <FaLinkedin /></a>
-            <a className='h-16 w-16' href="https://github.com/Naiemisalm?tab=repositories"> <FaGithub /></a>
-        
-        </div>
-       </div>
-    );
-};
+            <div
+              className='flex flex-col lg:gap-x-8 lg:flex-row'
+            >
+              <div
+                className='flex flex-1 flex-col items-start space-y-8 mb-12 lg:mb-0 lg:pt-2'
+              >
+                {contact.map((item, index) => {
+                  const { icon, title, subtitle, description } = item;
+                  return (
+                    <div className='flex flex-col lg:flex-row gap-x-4' key={index}>
+                      <div className='text-accent rounded-sm w-14 h-14 flex items-start justify-center mt-2 mb-4 lg:mb-0 text-2xl'>
+                        {icon}
+                      </div>
+                      <div>
+                        <h4 className='font-body text-xl mb-1'>{title}</h4>
+                        <p className='mb-1 text-paragraph'>{subtitle}</p>
+                        <p className='text-accent font-normal '>{description}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+              <form
+                className='space-y-8 w-full max-w-[780px]'
+              >
+                <div className=' gap-8 inline-grid grid-cols-3 gap-4"'>
+                  <input className='input' type='text' placeholder='Your name' />
+                  <input className='input' type='email' placeholder='Your email' /> <br />
+                </div>
+                <input className='input' type='text' placeholder='Subject' /><br />
+                <textarea
+                  className='textarea'
+                  placeholder='Your message'
+                ></textarea> <br />
+                <button className='btn btn-lg bg-accent hover:bg-secondary-hover'>
+                  Send message
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+      );
+    };
 
 export default Contact;
