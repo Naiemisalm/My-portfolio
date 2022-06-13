@@ -10,7 +10,7 @@ const Contact = () => {
         emailjs.sendForm()
     }
     return (
-        <section className='bg-black mt-10' id='contact'>
+        <section className='bg-black mt-10 py-10' id='contact'>
           <div className='container mx-auto'>
             <div className='flex flex-col items-center text-center'>
               <h2 className='text-3xl text-center py-6 underline'> Contact me </h2>
