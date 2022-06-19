@@ -6,10 +6,12 @@ import Navbar from './Shared/Navbar';
 import Contact from './Pages/Home/Contact';
 import Project from './Pages/Home/Project';
 import SocialIcons from './Pages/Home/SocialIcons';
+import Blogs from './Pages/Home/Blogs';
+
 
 function App() {
   return (
-    <div className='px-20'>
+    <div className='px-20' data-aos="fade-down">
           <Navbar></Navbar>  
           <SocialIcons/>
  <Routes>
@@ -18,9 +20,11 @@ function App() {
    <Route path='/about' element={<About></About>}></Route>
    <Route path='/contact' element={<Contact/>}></Route>
    <Route path='/project' element={<Project/>}></Route>
+   <Route path='/blog' element={<Blogs/>}></Route>
 
 
  </Routes>
+ {/* <ParticalsBackground/> */}
 
     </div>
   );
